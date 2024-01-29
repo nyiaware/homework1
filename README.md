@@ -42,21 +42,22 @@ Assignment Instructions:
 
 Team Member Contributions:
 
-   Christian Morrow: 
+   Christian Morrow
    
-   - Established Github Repository
    - Creation of essential project files such as README.txt, arrayDemo.html, and arrayDemo.php
    - Design and implementation of the HTML and PHP structure, documented through pseudocode.
    
-   Tiara Mack:
+   Tiara Mack
    
    - [placeholder}
    - [placeholder}
    
    Nyia
-   - [placeholder}
+   
+   - Established Github Repository
    - [placeholder}
    
    ReΣ
+   
    - [placeholder}
    - [placeholder}
