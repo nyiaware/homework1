@@ -49,15 +49,13 @@ Team Member Contributions:
    
    Tiara Mack
    
-   - [placeholder}
-   - [placeholder}
+   - Added Displays at the top of the webpage.
+   - Edited and Debugged.
    
    Nyia
    
    - Established Github Repository
-   - [placeholder}
    
    ReΣ
    
-   - [placeholder}
-   - [placeholder}
+   - Edited and Debugged.
