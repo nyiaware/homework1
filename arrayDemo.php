@@ -47,19 +47,23 @@
 
       // Function to calculate and display sum, average, and standard deviation
       function printCalculatedValues($array) {
-          echo "<table border='1'>";
-          echo "<tr><th>Sum</th><th>Average</th><th>Standard Deviation</th></tr>";
+        
+        echo "<table border='1'>";
+        echo "<tr><th>Row</th><th>Sum</th><th>Average</th><th>Standard Deviation</th></tr>";
+        
+        $rowNumber = 0; // Initialize the row number
+        foreach ($array as $row) {
+            // Calculate sum, average, and standard deviation
+            $sum = array_sum($row);
+            $average = number_format(array_sum($row) / count($row), 3);
+            $stdDev = number_format(calculateStandardDeviation($row), 3);
 
-          foreach ($array as $row) {
-              // Calculate sum, average, and standard deviation
-              $sum = array_sum($row);
-              $average = number_format(array_sum($row) / count($row), 3);
-              $stdDev = number_format(calculateStandardDeviation($row), 3);
-
-              // Display the results in the table
-              echo "<tr><td>{$sum}</td><td>{$average}</td><td>{$stdDev}</td></tr>";
+            // Display the results in the table
+            echo "<tr><td>{$rowNumber}</td><td>{$sum}</td><td>{$average}</td><td>{$stdDev}</td></tr>";
+            // increments the row # for the next row
+            $rowNumber++;
           }
-
+          
           echo "</table>";
       }
 
@@ -100,14 +104,20 @@
 
            // Retrieve form values
            $formValues = getFormValues();
+           
+           // Display original array
+           echo "<h2>Original Array</h2>";
+           
+           // Display original array size, min value, and max value
+           echo "<h3>Original Array Size: {$formValues['rows']} x {$formValues['columns']}</h2>";
+           echo "<h3>Min Value: {$formValues['min_value']}</h2>";
+           echo "<h3>Max Value: {$formValues['max_value']}</h2>";
 
            // Create and populate 2D array
            $array_1 = createArray($formValues);
      
-           // Display original array
-           echo "<h2>Original Array</h2>";
            printArrayTable($array_1);
-     
+
            // Display calculated values
            echo "<h2>Calculated Values</h2>";
            printCalculatedValues($array_1);
